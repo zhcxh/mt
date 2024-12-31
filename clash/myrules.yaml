@@ -1,4 +1,5 @@
 # https://mihomo.party/docs/guide/override/yaml
+# https://duoduogo.us.kg/  github加速
 # 在原规则后面追加规则
 +rules:
   - DOMAIN-SUFFIX,duoduogo.top,DIRECT
