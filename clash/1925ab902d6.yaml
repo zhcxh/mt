@@ -1,0 +1,30 @@
+# https://mihomo.party/docs/guide/override/yaml
+# 在原规则后面追加规则
++rules:
+  - DOMAIN-SUFFIX,duoduogo.top,DIRECT
+  - DOMAIN-SUFFIX,duoduola.cn,DIRECT
+  - DOMAIN-SUFFIX,duoduogo.us.kg,DIRECT
+  - DOMAIN-SUFFIX,cloudns.ch,DIRECT
+  - DOMAIN-SUFFIX,cloudflare.com,DIRECT
+  - DOMAIN-SUFFIX,cloudns.com,DIRECT
+  - DOMAIN-SUFFIX,amazon.com,DIRECT
+  - DOMAIN-SUFFIX,kimi.moonshot.cn,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-KEYWORD,domp4,DIRECT
+  - DOMAIN-KEYWORD,alist,DIRECT
+  - DOMAIN,icon-sets.iconify.design,DIRECT
+  - DOMAIN-SUFFIX,gamer520.com,DIRECT
+  - DOMAIN-SUFFIX,gofile.io,DIRECT
+  - DOMAIN-SUFFIX,bangumi.tv,DIRECT
+  - DOMAIN-SUFFIX,bgm.tv,DIRECT
+  - DOMAIN-SUFFIX,aliyundrive.com,DIRECT
+  - DOMAIN-SUFFIX,portainer.io,DIRECT
+  - DOMAIN-SUFFIX,steampowered.com,DIRECT
+  - DOMAIN-SUFFIX,puresys.net,DIRECT
+  - DOMAIN-SUFFIX,pages.dev,DIRECT
+  - DOMAIN-SUFFIX,aliyundrive.com,DIRECT
