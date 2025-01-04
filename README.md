@@ -2,7 +2,7 @@
 介绍
 个人使用：图片、图标、 ......
 
-游戏封面
+*游戏封面
 ps1
 
 https://raw.githubusercontent.com/xlenore/psx-covers/main/covers/${serial}.jpg
@@ -26,7 +26,7 @@ DiskGenius（夸克）：https://pan.quark.cn/s/cb34c234afb4 （提取码：YYia
 
 BalenaEtcher（官网）：https://www.balena.io/etcher
 
-BT下载
+*BT下载
 
 qBEE仓库: https://github.com/c0re100/qBittorrent-Enhanced-Edition
 
@@ -38,7 +38,7 @@ qBEE的docker镜像：https://hub.docker.com/r/superng6/qbittorrentee
 
 彩蛋：RARBG国外电影资源站-https://en.rarbg-official.com/
 
-玩转服务器
+*玩转服务器
 
 宝塔面板安装教程：https://www.bt.cn/bbs/thread-19376-1-1.html
 
@@ -50,7 +50,7 @@ qBEE的docker镜像：https://hub.docker.com/r/superng6/qbittorrentee
 
 黑木耳电影资源使用教程：https://www.heimuer.tv/help/index.html#IyCms
 
-漫画翻译
+*漫画翻译
 
 misaka translator B站地址： https://www.bilibili.com/video/BV1Qt4y11713/
 
@@ -58,7 +58,7 @@ misaka translator GitHub地址：https://github.com/hanmin0822/MisakaTranslator
 
 comic-translate : https://github.com/ogkalu2/comic-translate
 
-压缩包破解
+*压缩包破解
 
 Advanced Archive Password Recovery 4.54-压缩包破解工具
 
@@ -68,7 +68,7 @@ ARCHPR详细使用教程可以参考：https://www.52pojie.cn/thread-1691394-1-1
 
 fcrackzip详细使用教程可以参考：https://cloud.tencent.com/developer/article/2092291 （视频演示中加了-v选项，可以实时查看解密过程）
 
-在线视频下载相关链接
+*在线视频下载相关链接
 
 在线解析网站推荐 https://www.xiazaitool.com/
 
@@ -76,6 +76,6 @@ CR TubeGet 下载 https://pan.baidu.com/s/1xUxFAqQUSOOVOPBXPBATmw?pwd=0000
 
 Downie 4 下载 https://www.123pan.com/s/ZFF9-p3nPA
 
-换脸软件
+*换脸软件
 
 直播换脸封装包下载链接：pan.quark.cn/s/e7763cfa00b2
