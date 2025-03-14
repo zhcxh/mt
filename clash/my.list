@@ -33,3 +33,5 @@ DOMAIN-SUFFIX,oracle.com
 DOMAIN-SUFFIX,alipan.com
 PROCESS-NAME,Thunder
 PROCESS-NAME,aDrive
+DOMAIN-SUFFIX,aliyundrive.cloud
+PROCESS-NAME,aliyundrive
