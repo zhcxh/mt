@@ -38,3 +38,4 @@
   - PROCESS-NAME,aliyundrive,DIRECT
   - DOMAIN-SUFFIX,spaceship.com,DIRECT
   - DOMAIN-SUFFIX,deepseek.com,DIRECT
+  - DOMAIN-SUFFIX,gov.cn,DIRECT
