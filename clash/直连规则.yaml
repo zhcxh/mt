@@ -32,10 +32,9 @@
   - DOMAIN-SUFFIX,serv00.com,DIRECT
   - DOMAIN-SUFFIX,oracle.com,DIRECT
   - DOMAIN-SUFFIX,alipan.com,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
   - PROCESS-NAME,aDrive,DIRECT
-  - DOMAIN-SUFFIX,aliyundrive.cloud,DIRECT
   - PROCESS-NAME,aliyundrive,DIRECT
+  - DOMAIN-SUFFIX,aliyundrive.cloud,DIRECT
   - DOMAIN-SUFFIX,spaceship.com,DIRECT
   - DOMAIN-SUFFIX,deepseek.com,DIRECT
   - DOMAIN-SUFFIX,gov.cn,DIRECT
