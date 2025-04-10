@@ -2,8 +2,9 @@
 # 在原规则后面追加规则
 +rules:
   - DOMAIN-SUFFIX,duoduogo.top,DIRECT
-  - DOMAIN-SUFFIX,duoduola.cn,DIRECT
-  - DOMAIN-SUFFIX,duoduogo.us.kg,DIRECT
+  - DOMAIN-SUFFIX,792113.xyz,DIRECT
+  - DOMAIN-SUFFIX,dpdns.org,DIRECT
+  - DOMAIN-SUFFIX,ggff.net,DIRECT
   - DOMAIN-SUFFIX,cloudns.ch,DIRECT
   - DOMAIN-SUFFIX,cloudflare.com,DIRECT
   - DOMAIN-SUFFIX,cloudns.com,DIRECT
