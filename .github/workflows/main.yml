@@ -1,29 +1,43 @@
-name: Update Config
+name: Update Clash Config
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-        # Runs everyday at 1:00 AM
-        - cron: "0 1 * * *"
-
-permissions:
-  contents: write
+    - cron: "0 0 * * *"  # Daily at 00:00 UTC
+  workflow_dispatch:     # Manual trigger
 
 jobs:
-  build:
+  update-clash-config:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone s workjs
-        run: |
-          curl -o ./clash/ACL4SSR_Online_Full.yaml https://raw.githubusercontent.com/mihomo-party-org/override-hub/refs/heads/main/yaml/ACL4SSR_Online_Full.yaml
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: main
-          commit_message: ':arrow_up: update latest s'
-          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
-          push_options: '--set-upstream'
+      - name: Download latest ACL4SSR_Online_Full.yaml
+        run: |
+          # 确保目标目录存在
+          mkdir -p ./clash || true          # -p 不报错， || true 防止错误终止
+          echo "Trying to download file..."
+          
+          # 使用 curl -L 跟随重定向
+          if ! curl -L -o ./clash/ACL4SSR_Online_Full.yaml \
+            "https://raw.githubusercontent.com/mihomo-party-org/override-hub/main/yaml/ACL4SSR_Online_Full.yaml"; then
+            echo "❌ Failed to download file!"
+            exit 1  # 如果下载失败，直接终止 workflow
+          else
+            echo "✅ File downloaded successfully!"
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ./clash/ACL4SSR_Online_Full.yaml
+          
+          # - 检查是否更改
+          if git diff --cached --quiet; then
+            echo "No changes detected. Skipping commit."
+          else
+            git commit -m "chore: update Clash config from upstream [$(date +'%Y-%m-%d %H:%M UTC')]"
+            git push
+          fi
