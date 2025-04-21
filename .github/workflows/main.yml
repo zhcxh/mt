@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Clone s workjs
         run: |
-          wget -O ./clash/ACL4SSR_Online_Full.yaml https://raw.githubusercontent.com/mihomo-party-org/override-hub/refs/heads/main/yaml/ACL4SSR_Online_Full.yaml
+          wget -O clash/ACL4SSR_Online_Full.yaml https://raw.githubusercontent.com/mihomo-party-org/override-hub/refs/heads/main/yaml/ACL4SSR_Online_Full.yaml
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
