@@ -1,0 +1,29 @@
+name: Update Config
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+        # Runs everyday at 1:00 AM
+        - cron: "0 1 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone s workjs
+        run: |
+          wget -O ./clash/ACL4SSR_Online_Full.yaml https://raw.githubusercontent.com/mihomo-party-org/override-hub/refs/heads/main/yaml/ACL4SSR_Online_Full.yaml
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: ':arrow_up: update latest s'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
+          push_options: '--set-upstream'
