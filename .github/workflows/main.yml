@@ -27,7 +27,6 @@ jobs:
           else
             echo "✅ File downloaded successfully!"
           fi
-          curl -L -o ./clash/CF优选官方IP(无交互三地区电脑版).zip https://raw.githubusercontent.com/yonggekkk/Cloudflare_vless_trojan/refs/heads/main/CF%E4%BC%98%E9%80%89%E5%AE%98%E6%96%B9IP(%E6%97%A0%E4%BA%A4%E4%BA%92%E4%B8%89%E5%9C%B0%E5%8C%BA%E7%94%B5%E8%84%91%E7%89%88).zip
           
       - name: Commit and push changes
         run: |
