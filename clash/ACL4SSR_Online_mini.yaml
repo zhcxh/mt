@@ -42,7 +42,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 手动切换
       - DIRECT
-  - name: 🎯 全球直连
+  - name: 🇨🇳 国内直连
     type: select
     proxies:
       - DIRECT
@@ -278,20 +278,20 @@ rule-providers:
     type: http
 
 rules:
-  - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
-  - "RULE-SET,UnBan,🎯 全球直连"
+  - "RULE-SET,LocalAreaNetwork,🇨🇳 国内直连"
+  - "RULE-SET,UnBan,🇨🇳 国内直连"
   - "RULE-SET,BanAD,🛑 拦截净化"
   - "RULE-SET,BanProgramAD,🛑 拦截净化"
-  - "RULE-SET,GoogleFCM,🎯 全球直连"
-  - "RULE-SET,GoogleCN,🎯 全球直连"
-  - "RULE-SET,SteamCN,🎯 全球直连"
-  - "RULE-SET,Bing,🎯 全球直连"
-  - "RULE-SET,OneDrive,🎯 全球直连"
-  - "RULE-SET,Microsoft,🎯 全球直连"
-  - "RULE-SET,Apple,🎯 全球直连"
+  - "RULE-SET,GoogleFCM,🇨🇳 国内直连"
+  - "RULE-SET,GoogleCN,🇨🇳 国内直连"
+  - "RULE-SET,SteamCN,🇨🇳 国内直连"
+  - "RULE-SET,Bing,🇨🇳 国内直连"
+  - "RULE-SET,OneDrive,🇨🇳 国内直连"
+  - "RULE-SET,Microsoft,🇨🇳 国内直连"
+  - "RULE-SET,Apple,🇨🇳 国内直连"
   - "RULE-SET,Telegram,🌏 国外代理"
   - "RULE-SET,OpenAi,🌏 国外代理"
-  - "RULE-SET,NetEaseMusic,🎯 全球直连"
+  - "RULE-SET,NetEaseMusic,🇨🇳 国内直连"
   - "RULE-SET,Epic,🌏 国外代理"
   - "RULE-SET,Origin,🌏 国外代理"
   - "RULE-SET,Sony,🌏 国外代理"
@@ -301,12 +301,12 @@ rules:
   - "RULE-SET,Netflix,🌏 国外代理"
   - "RULE-SET,Bahamut,🌏 国外代理"
   - "RULE-SET,BilibiliHMT,🌏 国外代理"
-  - "RULE-SET,Bilibili,🎯 全球直连"
-  - "RULE-SET,ChinaMedia,🎯 全球直连"
+  - "RULE-SET,Bilibili,🇨🇳 国内直连"
+  - "RULE-SET,ChinaMedia,🇨🇳 国内直连"
   - "RULE-SET,ProxyMedia,🌏 国外代理"
   - "RULE-SET,ProxyGFWlist,🌏 国外代理"
-  - "RULE-SET,ChinaDomain,🎯 全球直连"
-  - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+  - "RULE-SET,ChinaDomain,🇨🇳 国内直连"
+  - "RULE-SET,ChinaCompanyIp,🇨🇳 国内直连"
   - "RULE-SET,Download,⏬ 下载专用"
-  - "GEOIP,CN,🎯 全球直连"
+  - "GEOIP,CN,🇨🇳 国内直连"
   - "MATCH,🐟 漏网之鱼"
