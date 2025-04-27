@@ -3,7 +3,6 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - ⚖️ 负载均衡-轮询
       - ⚖️ 负载均衡-散列
       - 🚀 手动切换
       - DIRECT
@@ -26,15 +25,6 @@ proxy-groups:
     strategy: consistent-hashing
     include-all: true
     exclude-filter: (?i)中国|CN|China|大陆|TW|Taiwan|台湾
-  - name: ⚖️ 负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    expected-status: 204
-    interval: 300
-    strategy: round-robin
-    include-all: true
-    exclude-filter: (?i)中国|CN|China|大陆|TW|Taiwan|台湾
-
   - name: 🌏 国外代理
     type: select
     proxies:
@@ -54,9 +44,8 @@ proxy-groups:
   - name: ⏬ 下载专用
     type: select
     proxies:
-      - DIRECT
       - ⚖️ 负载均衡-散列
-      - ⚖️ 负载均衡-轮询
+      - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -276,9 +265,16 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  prevent_dns_leak:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://raw.githubusercontent.com/xishang0128/rules/main/clash%20or%20stash/prevent_dns_leak/prevent_dns_leak_domain.list
 
 rules:
   - "RULE-SET,LocalAreaNetwork,🇨🇳 国内直连"
+  - "RULE-SET,prevent_dns_leak,🐟 漏网之鱼"
   - "RULE-SET,UnBan,🇨🇳 国内直连"
   - "RULE-SET,BanAD,🛑 拦截净化"
   - "RULE-SET,BanProgramAD,🛑 拦截净化"
