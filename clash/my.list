@@ -1,9 +1,11 @@
+#自用域名
 DOMAIN-SUFFIX,duoduogo.top
 DOMAIN-SUFFIX,792113.xyz
 DOMAIN-SUFFIX,dpdns.org
 DOMAIN-SUFFIX,ggff.net
 DOMAIN-SUFFIX,cloudns.ch
 
+#云服务
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,pages.dev
 DOMAIN-SUFFIX,cloudns.com
@@ -13,6 +15,7 @@ DOMAIN-SUFFIX,hostvds.com
 DOMAIN-SUFFIX,claw.cloud
 DOMAIN-SUFFIX,clawcloudrun.com
 
+#常用网站
 DOMAIN-SUFFIX,gamer520.com
 DOMAIN-SUFFIX,gofile.io
 DOMAIN-SUFFIX,bgm.tv
@@ -26,5 +29,8 @@ DOMAIN-SUFFIX,chanjet.com
 DOMAIN-SUFFIX,surfercloud.com
 DOMAIN-SUFFIX,88.com
 
+#政企、银行
 DOMAIN-SUFFIX,gov.cn
+
+#其它
 DOMAIN,icon-sets.iconify.design
