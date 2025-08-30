@@ -3,7 +3,6 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - ⚖️ 负载均衡-散列
       - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
@@ -24,14 +23,6 @@ proxy-groups:
     ##分组内代理选择策略，可选 'sticky-sessions' 或 'round-robin'，不支持 'consistent-hashing'
     ##默认是 'sticky-sessions'，散列 ，在收集数据时具有更稳定、平滑的节点切换逻辑
     strategy: sticky-sessions
-  - name: ⚖️ 负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    expected-status: 204
-    interval: 300
-    strategy: consistent-hashing
-    include-all: true
-    exclude-filter: (?i)中国|CN|China|大陆|TW|Taiwan|台湾
   - name: 🌏 国外代理
     type: select
     proxies:
@@ -47,12 +38,6 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - DIRECT
-  - name: ⏬ 下载专用
-    type: select
-    proxies:
-      - ⚖️ 负载均衡-散列
-      - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -310,6 +295,6 @@ rules:
   - "RULE-SET,ProxyGFWlist,🌏 国外代理"
   - "RULE-SET,ChinaDomain,🇨🇳 国内直连"
   - "RULE-SET,ChinaCompanyIp,🇨🇳 国内直连"
-  - "RULE-SET,Download,⏬ 下载专用"
+  - "RULE-SET,Download,🇨🇳 国内直连"
   - "GEOIP,CN,🇨🇳 国内直连"
   - "MATCH,🐟 漏网之鱼"
