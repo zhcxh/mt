@@ -29,6 +29,11 @@ DOMAIN-SUFFIX,chanjet.com
 DOMAIN-SUFFIX,surfercloud.com
 DOMAIN-SUFFIX,88.com
 
+#国内AI
+DOMAIN-SUFFIX,doubao.com
+DOMAIN-SUFFIX,kimi.moonshot.cn
+DOMAIN-SUFFIX,deepseek.com
+
 #政企、银行
 DOMAIN-SUFFIX,gov.cn
 
