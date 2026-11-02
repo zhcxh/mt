@@ -1,1 +1,2 @@
-telegram_webproxy.js 是一个单文件 Cloudflare Workers 实现：它扮演 Telegram 官方 Web Proxy（td web-proxy）后端，把客户端（Desktop / Android）在隔离 webview 里发起的 WebSocket lanes，直接转接到 Telegram Web K 自己的 KWS 通道（kws{dc}[-1].web.telegram.org/apiws）。
+- telegram_webproxy.js
+  是一个单文件 Cloudflare Workers 实现：它扮演 Telegram 官方 Web Proxy（td web-proxy）后端，把客户端（Desktop / Android）在隔离 webview 里发起的 WebSocket lanes，直接转接到 Telegram Web K 自己的 KWS 通道（kws{dc}[-1].web.telegram.org/apiws）。
