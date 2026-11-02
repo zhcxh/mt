@@ -1,1 +1,4 @@
-- telegram_webproxy.js  是一个单文件 Cloudflare Workers 实现：它扮演 Telegram 官方 Web Proxy（td web-proxy）后端，把客户端（Desktop / Android）在隔离 webview 里发起的 WebSocket lanes，直接转接到 Telegram Web K 自己的 KWS 通道（kws{dc}[-1].web.telegram.org/apiws）。
+`telegram_webproxy.js` 是一个单文件 Cloudflare Workers 实现：Telegram 官方 Web Proxy（td web-proxy）后端，来自https://github.com/ToiCF/CF-Workers-TGProxy
+<br>绑定变量，使用 PowerShell
+<br>`SECRET` $bytes = New-Object byte[] 16; [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes); -join ($bytes | ForEach-Object { $_.ToString("x2") })
+<br>`BOOT` $bytes = New-Object byte[] 24; [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes); -join ($bytes | ForEach-Object { $_.ToString("x2") })
