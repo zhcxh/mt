@@ -2,13 +2,11 @@ name: Sync telegram_webproxy.js from Upstream
 
 on:
   schedule:
-    # 每天 UTC 0:00 运行（北京时间 8:00）
-    # 如需指定时区，可添加 timezone: "Asia/Shanghai"
-    - cron: '0 0 * * *'
-  workflow_dispatch: # 支持手动触发
+    - cron: '0 0 * * *'   # UTC 0:00，即北京时间 8:00
+  workflow_dispatch:
 
 permissions:
-  contents: write   # 需要写入权限才能 git push
+  contents: write
 
 jobs:
   sync-file:
@@ -17,22 +15,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 获取完整历史，便于后续 diff
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download upstream file
         run: |
-          mkdir -p sync   # 可改为你期望的保存路径
+          mkdir -p sync
           curl -fsSL \
-            https://raw.githubusercontent.com/ToiCF/CF-Workers-TGProxy/refs/heads/main/telegram_webproxy.js \
+            --connect-timeout 30 \
+            --max-time 120 \
+            --retry 3 \
+            --retry-delay 5 \
+            https://raw.githubusercontent.com/ToiCF/CF-Workers-TGProxy/main/telegram_webproxy.js \
             -o sync/telegram_webproxy.js
 
-      - name: Check for changes and commit
+      - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet -- sync/telegram_webproxy.js; then
+          if [[ -z $(git status --porcelain) ]]; then
             echo "No changes detected."
             exit 0
           fi
