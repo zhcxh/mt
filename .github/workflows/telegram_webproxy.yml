@@ -24,7 +24,7 @@ jobs:
         run: |
           mkdir -p sync   # 可改为你期望的保存路径
           curl -fsSL \
-            https://raw.githubusercontent.com/ToiCF/CF-Workers-TGProxy/main/telegram_webproxy.js \
+            https://raw.githubusercontent.com/ToiCF/CF-Workers-TGProxy/refs/heads/main/telegram_webproxy.js \
             -o sync/telegram_webproxy.js
 
       - name: Check for changes and commit
